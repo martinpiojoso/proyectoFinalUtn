@@ -1,0 +1,22 @@
+{
+  "name": "proyecto_final_utn",
+  "version": "1.0.0",
+  "description": "proyectoUtn",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cls": "^0.1.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.8",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {}
+}
