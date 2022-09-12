@@ -1,0 +1,120 @@
+
+
+<!-- Contacto-->
+	<section class="page-section" id="contacto">
+		<div class="container px-4 px-lg-5">
+			<div class="row gx-4 gx-lg-5 justify-content-center">
+				<div class="col-lg-8 col-xl-6 text-center">
+					<h2 class="mt-0">Formulario de contacto</h2>
+					<hr class="divider" />
+					<p class="text-muted mb-5">Rellene el formulario de contacto y le enviamos información a la brevedad</p>
+				</div>
+			</div>
+			<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+				<div class="col-lg-6">
+			
+					<form action="/contacto" method="post"   id="contactForm">
+
+						<!-- Nombre-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="name" type="text" placeholder="Escriba su nombre.."
+								data-sb-validations="required" />
+							<label for="name">Nombre</label>
+							<div class="invalid-feedback" data-sb-feedback="name:required">Nombre requerido!</div>
+						</div>
+
+						<!-- Email-->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="email" type="email" placeholder="name@example.com"
+								data-sb-validations="required,email" />
+							<label for="email">Mail</label>
+							<div class="invalid-feedback" data-sb-feedback="email:required">Mail requerido!</div>
+							<div class="invalid-feedback" data-sb-feedback="email:email">Mail no válido</div>
+						</div>
+
+						<!-- Telefóno -->
+						<div class="form-floating mb-3">
+							<input class="form-control" id="phone" type="number" placeholder="(123) 456-7890"
+								data-sb-validations="required" />
+							<label for="phone">Teléfono</label>
+							<div class="invalid-feedback" data-sb-feedback="phone:required">Teléfono requerido!</div>
+						</div>
+
+						<!-- Mensaje -->
+						<div class="form-floating mb-3">
+							<textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
+								style="height: 10rem" data-sb-validations="required"></textarea>
+							<label for="message">Mensaje</label>
+							<div class="invalid-feedback" data-sb-feedback="message:required">Mensaje requerido!!.</div>
+						</div>
+
+						<!-- Boton Enviar-->
+						<div class="d-none" id="submitSuccessMessage">
+							<div class="text-center mb-3">
+								<div class="fw-bolder">Mensaje enviado correctamente!!</div>
+								<br />
+							</div>
+						</div>
+
+						<div class="d-none" id="submitErrorMessage">
+							<div class="text-center text-danger mb-3">Mensaje incorrecto</div>
+						</div>
+
+						<!-- Button-->
+						<div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
+								type="submit">Enviar</button></div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	<div class="container px-4 px-lg-5">
+		<h2 class="text-center">Doradas - Apart</h2>
+		<br>
+		<div class="row gx-4 gx-lg-5">
+			<div class="col-lg-3 col-md-6 text-center">
+				<div class="mt-5">
+					<div class="mb-2">
+						<a href="https://www.facebook.com/" target="_blank">
+							<i class="bi bi-facebook"></i>
+						</a>
+					</div>
+					<h3 class="h4 mb-2">Facebook</h3>
+
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<div class="mt-5">
+					<div class="mb-2">
+						<a href="https://www.whatsapp.com/" target="_blank">
+							<i class="bi bi-whatsapp"></i>
+						</a>
+					</div>
+					<h3 class="h4 mb-2">Whatsapp</h3>
+
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<div class="mt-5">
+					<div class="mb-2">
+						<a href="https://www.instagram.com/" target="_blank">
+							<i class="bi bi-instagram"></i>
+						</a>
+					</div>
+					<h3 class="h4 mb-2">Instagram</h3>
+
+				</div>
+			</div>
+			<div class="col-lg-3 col-md text-center">
+				<div class="mt-5">
+					<div class="mb-2">
+						<a href="https://ar.linkedin.com/" target="_blank">
+							<i class="bi bi-linkedin"></i>
+						</a>
+					</div>
+					<h3 class="h4 mb-2">Linkedin<h3>			
+				</div>
+			</div>
+
+		</div>
+	</div>
