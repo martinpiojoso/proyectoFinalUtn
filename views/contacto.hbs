@@ -13,39 +13,35 @@
 			<div class="row gx-4 gx-lg-5 justify-content-center mb-5">
 				<div class="col-lg-6">
 			
-					<form action="/contacto" method="post"   id="contactForm">
+					<form action="contacto" method="post" id="contactForm">
 
 						<!-- Nombre-->
 						<div class="form-floating mb-3">
-							<input class="form-control" id="name" type="text" placeholder="Escriba su nombre.."
-								data-sb-validations="required" />
-							<label for="name">Nombre</label>
-							<div class="invalid-feedback" data-sb-feedback="name:required">Nombre requerido!</div>
+							<input class="form-control" id="nombre" type="text" name="nombre" placeholder="Escriba su nombre.." required />
+							<label for="nomnre">Nombre</label>
+							
 						</div>
 
 						<!-- Email-->
 						<div class="form-floating mb-3">
-							<input class="form-control" id="email" type="email" placeholder="name@example.com"
-								data-sb-validations="required,email" />
-							<label for="email">Mail</label>
-							<div class="invalid-feedback" data-sb-feedback="email:required">Mail requerido!</div>
-							<div class="invalid-feedback" data-sb-feedback="email:email">Mail no válido</div>
+							<input class="form-control" id="mail" type="text" name="mail" placeholder="name@example.com" requerid/>
+							<label for="mail">Mail</label>
+							
 						</div>
-
+ 
 						<!-- Telefóno -->
 						<div class="form-floating mb-3">
-							<input class="form-control" id="phone" type="number" placeholder="(123) 456-7890"
-								data-sb-validations="required" />
-							<label for="phone">Teléfono</label>
-							<div class="invalid-feedback" data-sb-feedback="phone:required">Teléfono requerido!</div>
+							<input class="form-control" id="telefono" type="number" name="telefono" placeholder="(123) 456-7890" required/>
+							<label for="telefono">Teléfono</label>
+							
 						</div>
 
 						<!-- Mensaje -->
 						<div class="form-floating mb-3">
-							<textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."
-								style="height: 10rem" data-sb-validations="required"></textarea>
+							<textarea class="form-control" id="message" type="text" name="mensaje" placeholder="Escriba su mensaje..!!"
+								style="height: 10rem" required></textarea>
 							<label for="message">Mensaje</label>
-							<div class="invalid-feedback" data-sb-feedback="message:required">Mensaje requerido!!.</div>
+							
 						</div>
 
 						<!-- Boton Enviar-->
@@ -60,14 +56,21 @@
 							<div class="text-center text-danger mb-3">Mensaje incorrecto</div>
 						</div>
 
+					
 						<!-- Button-->
-						<div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
-								type="submit">Enviar</button></div>
+						<div class="d-grid">
+							<button class="btn btn-primary" id="submitButton" type="submit" value="Enviar">Enviar</button>
+							</div>
+							
+							<div class="text-center">
+								<h2 class="text-danger">
+									 {{ validacion }}
+								</h2>
+							</div>
 					</form>
 				</div>
 			</div>
 		</div>
-
 	<div class="container px-4 px-lg-5">
 		<h2 class="text-center">Doradas - Apart</h2>
 		<br>
