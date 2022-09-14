@@ -70,7 +70,7 @@ app.get('/nosotros', (req, res) => {
   })
 });
 
-app.get("/contacto", (req, res) => {
+app.get('/contacto', (req, res) => {
   res.render("contacto", {
     styles: 'styles.css',
     scripts: 'scripts.js'
@@ -104,8 +104,8 @@ app.post('/contacto', (req, res) => {// Mail
     //     scripts: 'scripts.js'
     //   }); 
 
-    });
-// };
+    // });
+};
 
     async function envioMail() {
       let transporter = nodemailer.createTransport({
@@ -129,11 +129,7 @@ app.post('/contacto', (req, res) => {// Mail
 
     envioMail();
 
-  // });
-
 
 app.listen(puerto, () => {
   console.log(`Servidor corriendo en el puerto ${puerto}`);
 });
-
-
