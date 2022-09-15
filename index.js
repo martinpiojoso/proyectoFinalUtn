@@ -14,20 +14,21 @@ const puerto = 3000;
 
 
 //3 Conexion base de datos
-/* const conexion = mysql2.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-});
+//  const conexion = mysql2.createConnection({
+//   host: process.env.HOST,
+//   user: process.env.USER,
+//   password: process.env.PASSWORD,
+//   database: process.env.DATABASE,
+// });
 
-conexion.connect((err) => {
-  if (err) {
-    console.error(`Error de conexión: ${err.stack}`);
-  } else {
-    console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`);
-  }
-}); */
+// conexion.connect((err) => {
+//   if (err) {
+//     console.error(`Error de conexión: ${err.stack}`);
+//   } else {
+//     console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`);
+//   }
+// }); 
+
 
 // 4 Usamos los Middelwares: funciones de Express.Tienen que estar siempres antes de las rutas.
 app.use(express.json());
@@ -79,7 +80,7 @@ app.get('/contacto', (req, res) => {
 
 // -- Post --//
 
-app.post('/contacto', (req, res) => {// Mail
+app.post('/contacto', (req, res) => {// Sql
   const { nombre, mail, telefono, mensaje } = req.body;
 
   if (nombre == "" || mail == "" || telefono == "" || mensaje == "") {
@@ -89,23 +90,24 @@ app.post('/contacto', (req, res) => {// Mail
     });
   } else {
     
-    let datos = {
-      nombre: nombre,
-      mail: mail,
-      telefono: telefono
-    };
+  //   //Base de datos desconectada
+  //   let datos = {
+  //     nombre: nombre,
+  //     mail: mail,
+  //     telefono: telefono
+  //   };
 
-    // let sql = 'INSERT INTO usuarios SET ?';
+  // let sql = 'INSERT INTO usuarios SET ?';
 
-    // conexion.query(sql, datos, (err, result) => {
-    //   if (err) throw err;
-    //     res.render('contacto', {
-    //     styles: 'styles.css',
-    //     scripts: 'scripts.js'
-    //   }); 
+  //   conexion.query(sql, datos, (err, result) => {
+  //     if (err) throw err;
+  //       res.render('contacto', {
+  //       styles: 'styles.css',
+  //       scripts: 'scripts.js'
+  //     }); 
+      
+  //};
 
-    // });
-};
 
     async function envioMail() {
       let transporter = nodemailer.createTransport({
@@ -125,11 +127,15 @@ app.post('/contacto', (req, res) => {// Mail
         html: `Muchas gracias por contactar con nosotros. <br>
             Todas nuestras promociones estaran a su disposicion.`,
       });
+      
+      //Prueba local comentar linea 132 y 135
+      res.render('contacto')
     }
-
     envioMail();
+  } 
 
+});
 
-app.listen(puerto, () => {
-  console.log(`Servidor corriendo en el puerto ${puerto}`);
+app.listen(PORT, () => {
+  //console.log(`Servidor corriendo en el puerto ${puerto}`);
 });
